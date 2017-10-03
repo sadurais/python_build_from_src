@@ -43,7 +43,7 @@ install_python_from_source() {
     py_ver=$1
     [[ -z "$py_ver" ]] && croak "Specify python version"
 
-    tgt_dir="/harmony/3rdparty/pythons/python${py_ver}.${el_str}.${hw_plat}"  # Ex pythons/python2.6.6.el6.i686
+    tgt_dir="/usr/local/pythons/python${py_ver}.${el_str}.${hw_plat}"  # Ex pythons/python2.6.6.el6.i686
     command -v $tgt_dir/bin/python && return
 
     # Pyhapi needs python3. We can stick to Python3.5.3
